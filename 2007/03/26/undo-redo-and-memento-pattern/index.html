@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Undo - Redo and Memento Pattern | Jalal Ahmad&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="How many times we have come across the problem of implementing undo/redo feature in course of software development? I reckon not many a times but ever wondered how to implement such a neat feature (li">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Undo - Redo and Memento Pattern">
+<meta property="og:url" content="http://jalalahmad.com/2007/03/26/undo-redo-and-memento-pattern/index.html">
+<meta property="og:site_name" content="Jalal Ahmad's Blog">
+<meta property="og:description" content="How many times we have come across the problem of implementing undo/redo feature in course of software development? I reckon not many a times but ever wondered how to implement such a neat feature (li">
+<meta property="og:updated_time" content="2016-04-03T16:56:04.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Undo - Redo and Memento Pattern">
+<meta name="twitter:description" content="How many times we have come across the problem of implementing undo/redo feature in course of software development? I reckon not many a times but ever wondered how to implement such a neat feature (li">
+  
+    <link rel="alternate" href="/atom.xml" title="Jalal Ahmad&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Jalal Ahmad&#39;s Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Journey into realm of technology</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://jalalahmad.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-undo-redo-and-memento-pattern" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2007/03/26/undo-redo-and-memento-pattern/" class="article-date">
+  <time datetime="2007-03-26T04:36:00.000Z" itemprop="datePublished">2007-03-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Undo - Redo and Memento Pattern
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>How many times we have come across the problem of implementing undo/redo feature in course of software development? I reckon not many a times but ever wondered how to implement such a neat feature (like in office applications) in the software design.<br>Lo and Behold, the <a href="http://en.wikipedia.org/wiki/Memento_pattern" target="_blank" rel="external">Memento Pattern</a> is here to the rescue.<br><a id="more"></a><br>The idea is to encapsulate the state of an object in another object and hold its reference to be able to restore the object to original state when required. So if you have an object say A. Its state shall be represented by another object called B. Now when object A is to be modified to a new state the requesting object shall ask A for a state object, in this case called B and hold its reference. It will continue to change state of A. If an undo is required it simply resets the state of A by passing it back its original state B.<br>A detailed description with code example can be found <a href="http://en.wikipedia.org/wiki/Memento_pattern" target="_blank" rel="external">here</a>.<br>Another great resource on Memento is <a href="http://www.dofactory.com/Patterns/PatternMemento.aspx" target="_blank" rel="external">here</a> and <a href="http://www.codeproject.com/csharp/generic_undo_redo.asp" target="_blank" rel="external">here</a>.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jalalahmad.com/2007/03/26/undo-redo-and-memento-pattern/" data-id="cimkt8fyb00044tg9q76r4ir4" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2007/06/17/udt-user-defined-types-and-com/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          UDT (User Defined Types) and COM
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2007/03/25/some-useful-links-to-opensource-projects-hosts/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Some useful links to opensource projects hosts</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08/">August 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/03/">March 2008</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/01/">January 2008</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/12/">December 2007</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/06/">June 2007</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/03/">March 2007</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2013/08/20/octopress-the-best-and-simplest-blogging-engine/">Octopress - The Best and Simplest Blogging Engine</a>
+          </li>
+        
+          <li>
+            <a href="/2008/03/04/mpatrol-a-library-for-controlling-and-tracing-dynamic-memory-allocations/">MPatrol</a>
+          </li>
+        
+          <li>
+            <a href="/2008/01/14/what-have-i-done-whid-a-nifty-utility/">What Have I done (WHID) - A nifty utility</a>
+          </li>
+        
+          <li>
+            <a href="/2007/12/18/a-tough-competition-to-microsoft-groove/">A tough competition to Microsoft Groove</a>
+          </li>
+        
+          <li>
+            <a href="/2007/06/17/udt-user-defined-types-and-com/">UDT (User Defined Types) and COM</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
